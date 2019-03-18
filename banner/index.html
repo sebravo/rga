@@ -1,0 +1,100 @@
+<style>
+    section {
+        display: block;
+        float: left;
+    }
+    
+    #rga {
+        border: 0;
+        padding: 0;
+        width: 336px;
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #rga img {
+        border: 0;
+        padding: 0;
+    }
+    
+    #rga .paso1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    #rga .paso2 {
+        position: absolute;
+        bottom: 60px;
+        left: -670px;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+    }
+    
+    #rga .paso3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        opacity: 0;
+    }
+    
+    #rga .paso4 {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 4;
+        opacity: 0;
+    }
+    
+    #rga .paso5 {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 5;
+        opacity: 0
+    }
+    
+    #rga .paso6 {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 5;
+        opacity: 0;
+    }
+</style>
+
+<section id="rga">
+    <img src="img/1.jpg" class="paso1">
+    <img src="img/2.png" class="paso2">
+    <img src="img/3.jpg" class="paso3">
+    <img src="img/4.png" class="paso4">
+    <img src="img/5.png" class="paso5">
+    <img src="img/6.png" class="paso6">
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script>
+    TweenMax.to(".paso2", 0.8, {left:0}).delay(1);
+    TweenMax.to(".paso1", 1, {opacity:0}).delay(2.5);
+    TweenMax.to(".paso2", 1, {opacity:0}).delay(2.5);
+    TweenMax.to(".paso3", 1, {opacity:1}).delay(3);
+    TweenMax.to(".paso4", 0.8, {opacity:1}).delay(3.8);
+    TweenMax.to(".paso4", 0.5, {opacity:0}).delay(6);
+    TweenMax.to(".paso5", 0.5, {opacity:1}).delay(6.5);
+    TweenMax.to(".paso5", 0.5, {opacity:0}).delay(10);
+    TweenMax.to(".paso6", 1, {opacity:1}).delay(10.5);
+</script>
